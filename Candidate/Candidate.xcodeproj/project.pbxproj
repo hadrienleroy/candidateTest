@@ -19,6 +19,8 @@
 		C124186B2906A7F80031C91D /* GoalViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C124186A2906A7F80031C91D /* GoalViewModel.swift */; };
 		C124186D2906A80E0031C91D /* GoalItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C124186C2906A80E0031C91D /* GoalItemView.swift */; };
 		C124186F2906A8250031C91D /* GoalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C124186E2906A8250031C91D /* GoalView.swift */; };
+		C12418722906ABFA0031C91D /* GoalView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C12418712906ABFA0031C91D /* GoalView.xib */; };
+		C12418742906AC630031C91D /* GoalItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C12418732906AC630031C91D /* GoalItemView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,8 @@
 		C124186A2906A7F80031C91D /* GoalViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalViewModel.swift; sourceTree = "<group>"; };
 		C124186C2906A80E0031C91D /* GoalItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalItemView.swift; sourceTree = "<group>"; };
 		C124186E2906A8250031C91D /* GoalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalView.swift; sourceTree = "<group>"; };
+		C12418712906ABFA0031C91D /* GoalView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GoalView.xib; sourceTree = "<group>"; };
+		C12418732906AC630031C91D /* GoalItemView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GoalItemView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,11 +141,21 @@
 		C12418702906A8450031C91D /* Goal */ = {
 			isa = PBXGroup;
 			children = (
+				C12418752906ADB20031C91D /* xib */,
 				C124186C2906A80E0031C91D /* GoalItemView.swift */,
 				C124186E2906A8250031C91D /* GoalView.swift */,
 				C124186A2906A7F80031C91D /* GoalViewModel.swift */,
 			);
 			path = Goal;
+			sourceTree = "<group>";
+		};
+		C12418752906ADB20031C91D /* xib */ = {
+			isa = PBXGroup;
+			children = (
+				C12418732906AC630031C91D /* GoalItemView.xib */,
+				C12418712906ABFA0031C91D /* GoalView.xib */,
+			);
+			path = xib;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -251,6 +265,8 @@
 				C12418472906A7DF0031C91D /* LaunchScreen.storyboard in Resources */,
 				C12418442906A7DF0031C91D /* Assets.xcassets in Resources */,
 				C12418422906A7DE0031C91D /* Main.storyboard in Resources */,
+				C12418722906ABFA0031C91D /* GoalView.xib in Resources */,
+				C12418742906AC630031C91D /* GoalItemView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

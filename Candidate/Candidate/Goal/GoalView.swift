@@ -15,8 +15,21 @@ final class GoalView: UIView {
     // MARK: - Properties
     private var viewModel: GoalViewModelProtocol!
 
-    convenience init(viewModel: GoalViewModelProtocol) {
-        self.init(frame: .zero)
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        commonInit()
+    }
+
+    override required init(frame: CGRect) {
+        super.init(frame: frame)
+        commonInit()
+    }
+
+    func commonInit() {
+        logInstance(self)
+    }
+    
+    func setup(viewModel: GoalViewModelProtocol) {
         self.viewModel = viewModel
 
         setupStyles()
@@ -43,8 +56,6 @@ final class GoalView: UIView {
             }
             titleLabel.text = uppercaseFirstCharacter(viewModel.title)
         }
-
-        logInstance(self)
     }
 
     private func logInstance(_ object: Any) {

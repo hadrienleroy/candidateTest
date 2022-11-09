@@ -80,7 +80,7 @@ extension GoalView {
     }
 
     private func setupAutomatedIdentifiers() {
-        accessibilityIdentifier = "missions_conditions_card"
+        accessibilityIdentifier = "missions_conditions_card" 
     }
 
     func setupBindings() {

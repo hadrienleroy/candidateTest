@@ -44,6 +44,8 @@ class GoalItemView: UIView {
         }
     }
 
+    var onSelectButtonTap: (() -> Void)?
+    
     // MARK: - Birth and Death
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -56,6 +58,7 @@ class GoalItemView: UIView {
     }
 
     private func commonInit() {
+        instantiateNib()
         logInstance(self)
         backgroundColor = .red
     }
@@ -81,6 +84,10 @@ class GoalItemView: UIView {
 
     private func logInstance(_ object: Any) {
         print("LOG - new class instance \(String(describing: type(of: object)))")
+    }
+    
+    @IBAction func onSelectButtonTap(_ sender: Any) {
+        onSelectButtonTap?()
     }
 }
 

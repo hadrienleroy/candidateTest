@@ -52,7 +52,7 @@ final class GoalViewModel: GoalViewModelProtocol {
          dateFormatter: DateFormatter) {
         self.source = source
 
-        title = "Objectifs"
+        title = buildTitle?() ?? "Objectifs"
 
         var itemss = [GoalItem]()
 
@@ -98,4 +98,6 @@ final class GoalViewModel: GoalViewModelProtocol {
     private func logInstance(_ object: Any) {
         print("LOG - new class instance \(String(describing: type(of: object)))")
     }
+    
+    var buildTitle: (() -> String?)?
 }

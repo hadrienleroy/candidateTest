@@ -7,20 +7,25 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GoalView" customModule="Candidate" customModuleProvider="target">
+            <connections>
+                <outlet property="itemsStackView" destination="PpT-Hu-bXV" id="tpE-xs-dRG"/>
+                <outlet property="titleLabel" destination="kkZ-tT-D4f" id="SIx-Dk-t7J"/>
+            </connections>
+        </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="GoalView" customModule="Candidate" customModuleProvider="target">
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="408" height="563"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kkZ-tT-D4f">
-                    <rect key="frame" x="0.0" y="0.0" width="408" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <rect key="frame" x="0.0" y="0.0" width="408" height="24"/>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="PpT-Hu-bXV">
-                    <rect key="frame" x="0.0" y="41" width="408" height="522"/>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="PpT-Hu-bXV">
+                    <rect key="frame" x="0.0" y="44" width="408" height="519"/>
                 </stackView>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -34,10 +39,6 @@
                 <constraint firstItem="kkZ-tT-D4f" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="rkz-4l-s4b"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <connections>
-                <outlet property="itemsStackView" destination="PpT-Hu-bXV" id="4BW-q4-9hO"/>
-                <outlet property="titleLabel" destination="kkZ-tT-D4f" id="b6d-dG-fan"/>
-            </connections>
             <point key="canvasLocation" x="133.33333333333334" y="41.852678571428569"/>
         </view>
     </objects>

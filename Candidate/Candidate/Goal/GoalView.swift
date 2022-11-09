@@ -26,18 +26,23 @@ final class GoalView: UIView {
     }
 
     func commonInit() {
+        instantiateNib()
         logInstance(self)
     }
     
-    func setup(viewModel: GoalViewModelProtocol) {
+    func setup(viewModel: GoalViewModel) {
         self.viewModel = viewModel
-
+        
+        viewModel.buildTitle = {
+            self.buildTitle()
+        }
+        
         setupStyles()
         setupAutomatedIdentifiers()
         setupBindings()
 
         if case .bet = viewModel.source {
-            titleLabel.textColor = .cyan.withAlphaComponent(1)
+            titleLabel.textColor = .green.withAlphaComponent(1)
         } else if case .mission = viewModel.source {
             titleLabel.textColor = .blue
 
@@ -58,6 +63,10 @@ final class GoalView: UIView {
         }
     }
 
+    func buildTitle() -> String {
+        return "Titre de la Goal View"
+    }
+    
     private func logInstance(_ object: Any) {
         print("LOG - new class instance \(String(describing: type(of: object)))")
     }
@@ -67,7 +76,7 @@ final class GoalView: UIView {
 extension GoalView {
 
     private func setupStyles() {
-        titleLabel.textColor = .cyan
+        titleLabel.textColor = .darkGray
     }
 
     private func setupAutomatedIdentifiers() {
@@ -83,6 +92,10 @@ extension GoalView {
             view.title = item.title
             view.values = item.values
             view.image = item.image
+            view.onSelectButtonTap = { [unowned self] in
+                //      désolé jé pas eu le temps de finir
+            //  j'avais poney
+            }
             itemsStackView.addArrangedSubview(view)
         }
     }
